@@ -1,0 +1,223 @@
+﻿
+@model TemplateModel
+@{
+    Iphone11ViewModel template = (Iphone11ViewModel)Model;
+}
+
+<form class="content overflow-auto">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="card-body">
+        <div class="lg-block">
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Couleur de la coque</h2>
+                <div class="card-body text-center d-flex justify-content-center align-items-center flex-column pt-2 pb-2">
+                    <div id="colorPicker2" data-color="#b7a7b7"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Couleur des conteneurs</h2>
+                <div class="card-body text-center d-flex justify-content-center align-items-center flex-column pt-2 pb-2">
+                    <div id="colorPicker1" data-color="#cebbca"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Profil</h2>
+
+                <label for="profile" class="label-pp">Image :</label>
+                <input type="file" id="profile" name="Profile" value="" class="form-control-file input-pp" />
+
+                <div class="flex flex-row text-left">
+                    <div class="col-md-6">
+                        <label for="job1" class="label-flex-pp">Métier 1 :</label>
+                        <input type="text" id="job1" name="Job1" value="" class="form-control input-flex-pp" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="job2" class="label-flex-pp">Métier 2 :</label>
+                        <input type="text" id="job2" name="Job2" value="" class="form-control input-flex-pp" />
+                    </div>
+                </div>
+
+                <label asp-for="@template.Identity" class="label-pp">Prénom et Nom :</label>
+                <input type="text" asp-for="@template.Identity" id="name" name="Name" value="" class="form-control input-pp" />
+                <span asp-validation-for="@template.Identity" class="text-danger"></span>
+            </div>
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Réalisations</h2>
+                <div class="flex flex-row text-left">
+                    <div class="col-md-4">
+                        <label asp-for="@template.Quantity" class="label-flex-pp">Qté :</label>
+                        <input type="number" asp-for="@template.Quantity" id="quantity" name="Quantity" value="" class="form-control input-flex-pp" />
+                    </div>
+                    <div class="col-md-8">
+                        <label asp-for="@template.Productions" class="label-flex-pp">Titre :</label>
+                        <input type="text" asp-for="@template.Productions" id="productions" name="Productions" value="" class="form-control input-flex-pp" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <span asp-validation-for="@template.Quantity" class="text-danger"></span>
+                    <span asp-validation-for="@template.Productions" class="text-danger"></span>
+                </div>
+
+
+                <label for="profile" class="label-pp">Image 1 :</label>
+                <input type="file" id="picture1" name="picture1" value="" class="form-control-file input-pp" />
+
+                <label for="profile" class="label-pp">Image 2 :</label>
+                <input type="file" id="picture2" name="picture2" value="" class="form-control-file input-pp" />
+
+                <label for="profile" class="label-pp">Image 3 :</label>
+                <input type="file" id="picture3" name="picture3" value="" class="form-control-file input-pp" />
+            </div>
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Coordonnées</h2>
+
+                <label asp-for="@template.City" class="label-pp">Localisation :</label>
+                <input type="text" asp-for="@template.City" id="city" name="city" value="" class="form-control input-pp" />
+                <span asp-validation-for="@template.City" class="text-danger"></span>
+
+                <label asp-for="@template.NumberPhone" class="label-pp">N° de téléphone :</label>
+                <input type="tel" asp-for="@template.NumberPhone" id="numberPhone" name="NumberPhone" value="" class="form-control input-pp" />
+                <span asp-validation-for="@template.NumberPhone" class="text-danger"></span>
+
+                <label asp-for="@template.Email" class="label-pp">Email :</label>
+                <input type="email" asp-for="@template.Email" id="email" name="Email" value="" class="form-control input-pp" />
+                <span asp-validation-for="@template.Email" class="text-danger"></span>
+
+                <label asp-for="@template.Website" class="label-pp">Site Web :</label>
+                <input type="url" asp-for="@template.Website" id="website" name="Website" value="" class="form-control input-pp" />
+                <span asp-validation-for="@template.Website" class="text-danger"></span>
+            </div>
+            <div class="card">
+                <h2 class="card-title m-auto pt-2">Logo</h2>
+
+                <label for="logo" class="label-pp">Image :</label>
+                <input type="file" id="logo" name="Logo" value="" class="form-control-file input-pp" />
+
+                <label for="company" class="label-pp">Entreprise :</label>
+                <input type="text" id="company" name="Company" value="" class="form-control input-pp" />
+
+                <label for="slogan" class="label-pp">Slogan :</label>
+                <input type="text" id="slogan" name="Slogan" value="" class="form-control input-pp" />
+            </div>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide md-sm-block">
+            <div class="carousel-inner md-sm-block">
+                <div class="carousel-item active md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Couleur de la coque</h2>
+                        <div class="card-body text-center d-flex justify-content-center align-items-center flex-column pt-2 pb-2">
+                            <div id="colorPicker2" data-color="#b7a7b7"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Couleur des conteneurs</h2>
+                        <div class="card-body text-center d-flex justify-content-center align-items-center flex-column pt-2 pb-2">
+                            <div id="colorPicker1" data-color="#cebbca"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Profil</h2>
+
+                        <label for="profile" class="label-pp">Image :</label>
+                        <input type="file" id="profile" name="Profile" value="" class="form-control-file input-pp" />
+
+                        <div class="flex flex-row text-left">
+                            <div class="col-md-6">
+                                <label for="job1" class="label-flex-pp">Métier 1 :</label>
+                                <input type="text" id="job1" name="Job1" value="" class="form-control input-flex-pp" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="job2" class="label-flex-pp">Métier 2 :</label>
+                                <input type="text" id="job2" name="Job2" value="" class="form-control input-flex-pp" />
+                            </div>
+                        </div>
+
+                        <label asp-for="@template.Identity" class="label-pp">Prénom et Nom :</label>
+                        <input type="text" asp-for="@template.Identity" id="name" name="Name" value="" class="form-control input-pp" />
+                        <span asp-validation-for="@template.Identity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="carousel-item md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Réalisations</h2>
+                        <div class="flex flex-row text-left">
+                            <div class="col-md-4">
+                                <label asp-for="@template.Quantity" class="label-flex-pp">Qté :</label>
+                                <input type="number" asp-for="@template.Quantity" id="quantity" name="Quantity" value="" class="form-control input-flex-pp" />
+                            </div>
+                            <div class="col-md-8">
+                                <label asp-for="@template.Productions" class="label-flex-pp">Titre :</label>
+                                <input type="text" asp-for="@template.Productions" id="productions" name="Productions" value="" class="form-control input-flex-pp" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <span asp-validation-for="@template.Quantity" class="text-danger"></span>
+                            <span asp-validation-for="@template.Productions" class="text-danger"></span>
+                        </div>
+
+
+                        <label for="profile" class="label-pp">Image 1 :</label>
+                        <input type="file" id="picture1" name="picture1" value="" class="form-control-file input-pp" />
+
+                        <label for="profile" class="label-pp">Image 2 :</label>
+                        <input type="file" id="picture2" name="picture2" value="" class="form-control-file input-pp" />
+
+                        <label for="profile" class="label-pp">Image 3 :</label>
+                        <input type="file" id="picture3" name="picture3" value="" class="form-control-file input-pp" />
+                    </div>
+                </div>
+                <div class="carousel-item md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Coordonnées</h2>
+
+                        <label asp-for="@template.City" class="label-pp">Localisation :</label>
+                        <input type="text" asp-for="@template.City" id="city" name="city" value="" class="form-control input-pp" />
+                        <span asp-validation-for="@template.City" class="text-danger"></span>
+
+                        <label asp-for="@template.NumberPhone" class="label-pp">N° de téléphone :</label>
+                        <input type="tel" asp-for="@template.NumberPhone" id="numberPhone" name="NumberPhone" value="" class="form-control input-pp" />
+                        <span asp-validation-for="@template.NumberPhone" class="text-danger"></span>
+
+                        <label asp-for="@template.Email" class="label-pp">Email :</label>
+                        <input type="email" asp-for="@template.Email" id="email" name="Email" value="" class="form-control input-pp" />
+                        <span asp-validation-for="@template.Email" class="text-danger"></span>
+
+                        <label asp-for="@template.Website" class="label-pp">Site Web :</label>
+                        <input type="url" asp-for="@template.Website" id="website" name="Website" value="" class="form-control input-pp" />
+                        <span asp-validation-for="@template.Website" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="carousel-item md-sm-active-block">
+                    <div class="card">
+                        <h2 class="card-title m-auto pt-2">Logo</h2>
+
+                        <label for="logo" class="label-pp">Image :</label>
+                        <input type="file" id="logo" name="Logo" value="" class="form-control-file input-pp" />
+
+                        <label for="company" class="label-pp">Entreprise :</label>
+                        <input type="text" id="company" name="Company" value="" class="form-control input-pp" />
+
+                        <label for="slogan" class="label-pp">Slogan :</label>
+                        <input type="text" id="slogan" name="Slogan" value="" class="form-control input-pp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev md-sm-flex" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next md-sm-flex" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</form>
+
+@using (Html.BeginScripts())
+{
+}

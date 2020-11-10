@@ -1,0 +1,40 @@
+﻿@model List<TemplateModel>
+    <div id="modal-container" class="modal fade hidden-print" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addContactLabel">Sélectionner un autre modèle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form id="templates" asp-action="SelectTemplate" data-id="1">
+                    <div class="modal-body">
+                        <div class="flex-space-between col-md-12">
+                            @foreach (var template in Model)
+                            {
+                                <div id="@template.TemplateId" class="card card-template p-0 flex-column">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-center">@template.Title</h3>
+                                    </div>
+                                    <img class="card-img-top" src="@template.Picture" alt="@template.Title">
+                                    <input class="input-check-pp" type="radio" name="template" value="@template.TemplateId">
+                                    <input type="hidden" name="templateName" value="@template.Title.Trim()" />
+                                </div>
+                            }
+                            <div class="card card-template flex">
+                                <div class="card-body">
+                                    <p class="card-text text-center other">D'autres modèles seront bientôt disponibles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="m-auto">
+                            <button type="button" class="btn btn-primary" data-save="modal">AFFICHER CE MODÈLE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

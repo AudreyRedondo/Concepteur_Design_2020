@@ -1,0 +1,43 @@
+﻿@model BusinessCardDesigner.Models.TemplateModel
+@{
+    ViewData["Title"] = "Personnalisez un design !";
+    Model.Title = Model.Title.Replace(" ", "");
+}
+
+<div id="modal-placeholder"></div>
+
+<div class="text-center mt-5 mb-5">
+    <h1><u>@ViewData["Title"]</u></h1>
+</div>
+<div class="card mb-3 show-pp">
+    <div class="row no-gutters">
+        <p class="text-center">Les dimensions de votre écran ont été modifiées depuis que vous avez lancé cet outil. Veuillez rafraîchir la page pour afficher son contenu.</p>
+    </div>
+</div>
+<div id="containerTemplate" class="card mb-3 hide-pp">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only"></span>
+    </div>
+    <p class="spinner-text mt-5">Veuillez patienter... le chargement du design peut prendre un certain temps.</p>
+    <div class="row no-gutters">
+        <div class="col-md-12 col-lg-8 text-center">
+            <!-- Button trigger modal -->
+            <button id="changeModel" class="btn btn-primary" data-target="#modal-container" data-toggle="modal" data-url="@Url.Action("_Models")">
+                Changer de modèle
+            </button>
+            <div id="svgTemplate" data-url="@Url.Action("GetTemplate")">
+                <partial name="~/Views/Templates/@($"{'_'}{Model.Title}{ ".cshtml" }")" />
+            </div>
+        </div>
+        <div class="col-md-8 col-lg-4 text-center">
+            <div id="formTemplate" data-url="@Url.Action("GetForm")">
+                <partial name="~/Views/Pages/@($"{'_'}{Model.Title}{ ".cshtml" }")" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script type="text/javascript" id="scriptsTemplate" src="~/js/iphone11.js"></script>
+}
