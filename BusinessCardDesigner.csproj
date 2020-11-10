@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <!--<RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>-->
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Templates\Test.cshtml" />
+    <Content Remove="Views\Templates\_Iphone11 - Copie.cshtml" />
+    <Content Remove="Views\Templates\_Iphone11.cshtml" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Content Remove="Views\Templates\Test.cshtml" />
+    <Content Remove="Views\Templates\_Iphone11 - Copie.cshtml" />
+    <Content Remove="Views\Templates\_Iphone11.cshtml" />
+    <Content Remove="Views\Templates\_Plan2D.cshtml" />
+  </ItemGroup>-->
+
+  <!--<ItemGroup>
+    <EmbeddedResource Remove="TemplatesResource.resx" />
+  </ItemGroup>-->
+  
+  <!--<ItemGroup>
+    <Content Include="Views\Templates\_Iphone11.cshtml" />
+    --><!--<Content Include="Views\Templates\_Plan2D.cshtml" />--><!--
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.0" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.1" />
+    <PackageReference Include="jQuery.Validation.Unobtrusive" Version="2.0.20710" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\templates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Templates\Test.cshtml" />
+    <None Include="Views\Templates\_Iphone11 - Copie.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Templates\_Iphone11.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="TemplatesResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TemplatesResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="TemplatesResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemplatesResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <None Include="Views\Templates\Test.cshtml" />
+    <None Include="Views\Templates\_Iphone11 - Copie.cshtml" />
+  </ItemGroup>-->
+
+  <!--<ItemGroup>
+    <Page Include="Views\Templates\_Plan2D.cshtml" />
+  </ItemGroup>-->
+
+  <!--<ItemGroup>
+    <Resource Include="TemplatesResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemplatesResource.Designer.cs</LastGenOutput>
+    </Resource>
+  </ItemGroup>-->
+
+
+</Project>
