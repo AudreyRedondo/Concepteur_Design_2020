@@ -1,4 +1,4 @@
-# BusinessCardDesigner
+# Business Card Designer
 C# – ASP.Net Core, HTML – CSS, Javascript
 
 Cette application a été créée pour mon agence digitale.
